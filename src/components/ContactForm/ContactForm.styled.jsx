@@ -21,5 +21,6 @@ export const Form = styled.form`
   button {
     width: 100px;
     padding: 4px;
+    cursor: pointer;
   }
 `;

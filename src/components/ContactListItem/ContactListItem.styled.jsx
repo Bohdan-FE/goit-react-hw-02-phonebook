@@ -13,4 +13,7 @@ export const Item = styled.li`
       font-style: italic;
     }
   }
+  button {
+    cursor: pointer;
+  }
 `;
