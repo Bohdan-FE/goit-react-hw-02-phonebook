@@ -42,7 +42,7 @@ export class ContactForm extends Component {
             required
           />
         </label>
-        <label>
+        <label>Number
           <input
             onChange={this.handleChange}
             value={this.number}
