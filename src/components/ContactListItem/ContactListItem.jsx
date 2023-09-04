@@ -1,11 +1,8 @@
 import { Item } from './ContactListItem.styled';
 import PropTypes from 'prop-types';
 
-export const ContactListItem = ({ contacts, onDelete }) => {
-  return (
-    <>
-      {contacts.map(contact => (
-        <Item key={contact.id}>
+export const ContactListItem = ({ contact, onDelete }) => {
+  return<Item>
           <p>
             {contact.name}:<span>{contact.number}</span>
           </p>
@@ -13,13 +10,10 @@ export const ContactListItem = ({ contacts, onDelete }) => {
             Delete
           </button>
         </Item>
-      ))}
-    </>
-  );
 };
 
 ContactListItem.protoTypes = {
-  contacts: PropTypes.arrayOf(
+  contact: PropTypes.arrayOf(
     PropTypes.shape({
       number: PropTypes.string,
       name: PropTypes.string,

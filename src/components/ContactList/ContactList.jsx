@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onDelete }) => {
   return (
     <List>
-      <ContactListItem
-        contacts={contacts}
+      {contacts.map(contact => <ContactListItem
+        key={contact.id}
+        contact={contact}
         onDelete={onDelete}
-      ></ContactListItem>
+      />)}
     </List>
   );
 };
